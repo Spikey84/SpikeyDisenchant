@@ -1,0 +1,11 @@
+   main: Spikey.minecraft.disenchant.main
+   name: SpikeyDisEnchant
+   version: 1.0
+   author: Spikey
+   description: Sends messages from console.
+   depend: [Vault]
+   commands: 
+      disenchant:
+         description: DisEnchant something
+         
+         
