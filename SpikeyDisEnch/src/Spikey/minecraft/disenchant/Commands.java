@@ -22,12 +22,12 @@ public class Commands implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
 		if (sender instanceof Player) {
-			//Player player = (Player) sender;
-			//List<VillagerTrade> trades = new ArrayList<>();
+			Player player = (Player) sender;
+			List<VillagerTrade> trades = new ArrayList<>();
 			//trades.add(new VillagerTrade(new ItemStack(Material.STONE),new ItemStack(Material.COBBLESTONE),1));
-			//VillagerInventory inv = new VillagerInventory(trades, player);
+			VillagerInventory inv = new VillagerInventory(trades, player);
 			//inv.setName("Disenchant");
-			//inv.open();
+			inv.open();
 		}
 		return false;
 	}
