@@ -69,7 +69,7 @@ public class Commands implements CommandExecutor {
 			Player player = (Player) sender;
 			List<VillagerTrade> trades = new ArrayList<>();
 			
-			ItemStack[] items = player.getInventory().getStorageContents();
+			ItemStack[] items = player.getInventory().getContents();
 			player.sendMessage(items.toString());
 			//for(ItemStack x:items) {
 				//if(0 != x.getAmount()) {
