@@ -78,7 +78,7 @@ public class Commands implements CommandExecutor {
 					player.sendMessage(x.toString());
 				//}
 			}
-			
+			return false;
 			
 			trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
 			VillagerInventory inv = new VillagerInventory(trades, player);
