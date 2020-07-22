@@ -74,12 +74,13 @@ public class Commands implements CommandExecutor {
 			
 			for(ItemStack x:items) {
 				if(0 != x.getAmount()) {
-					trades.add(new VillagerTrade(x,disEnchant(player,x),10));
+					//trades.add(new VillagerTrade(x,disEnchant(player,x),10));
+					trades.add(new VillagerTrade(x,x,10));
 				}
 			}
 			
 			
-			//trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
+			trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
 			VillagerInventory inv = new VillagerInventory(trades, player);
 			inv.setName("Disenchant");
 			inv.open();
