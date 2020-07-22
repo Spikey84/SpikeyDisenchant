@@ -72,8 +72,8 @@ public class Commands implements CommandExecutor {
 			ItemStack[] items = player.getInventory().getContents();
 			for(ItemStack x:items) {
 				if(0 != x.getAmount()) {
-					trades.add(new VillagerTrade(x,disEnchant(player,x),10));
-					trades.add(new VillagerTrade(x,x,10));
+					//trades.add(new VillagerTrade(x,disEnchant(player,x),10));
+					//trades.add(new VillagerTrade(x,x,10));
 					player.sendMessage(x.toString());
 				}
 			}
