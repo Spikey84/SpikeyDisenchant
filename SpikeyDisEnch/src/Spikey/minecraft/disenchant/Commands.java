@@ -24,7 +24,7 @@ public class Commands implements CommandExecutor {
 		if (sender instanceof Player) {
 			Player player = (Player) sender;
 			List<VillagerTrade> trades = new ArrayList<>();
-			trades.add(new VillagerTrade(new ItemStack(Material.STONE),new ItemStack(Material.COBBLESTONE),10));
+			//trades.add(new VillagerTrade(new ItemStack(Material.STONE),new ItemStack(Material.COBBLESTONE),10));
 			//VillagerInventory inv = new VillagerInventory(trades, player);
 			//inv.setName("Disenchant");
 			//inv.open();
