@@ -15,7 +15,6 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-
 import masecla.villager.classes.VillagerInventory;
 import masecla.villager.classes.VillagerTrade;
 import net.md_5.bungee.api.ChatColor;
@@ -72,12 +71,13 @@ public class Commands implements CommandExecutor {
 			
 			ItemStack[] items = player.getInventory().getStorageContents();
 			
-			/*for(ItemStack x:items) {
+			for(ItemStack x:items) {
 				if(0 != x.getAmount()) {
 					//trades.add(new VillagerTrade(x,disEnchant(player,x),10));
-					trades.add(new VillagerTrade(x,x,10));
+					//trades.add(new VillagerTrade(x,x,10));
+					player.sendMessage(x.toString());
 				}
-			}*/
+			}
 			
 			
 			trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
