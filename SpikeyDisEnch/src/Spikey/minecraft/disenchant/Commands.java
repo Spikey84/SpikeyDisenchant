@@ -87,7 +87,7 @@ public class Commands implements CommandExecutor {
 					//trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
 					player.sendMessage("test");
 				}
-			}
+			
 			
 			
 			
