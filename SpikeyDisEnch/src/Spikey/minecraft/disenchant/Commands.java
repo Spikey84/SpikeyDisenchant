@@ -41,7 +41,6 @@ public class Commands implements CommandExecutor {
 					numEnch = numEnch+1;
 				}
 				player.sendRawMessage(prefix+ChatColor.WHITE+"Removed "+numEnch+" enchantments.");
-				//player.getInventory().setItemInMainHand(enchanted);	
 
 			
 			
