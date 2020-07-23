@@ -72,10 +72,12 @@ public class Commands implements CommandExecutor {
 			
 			ItemStack[] items = player.getInventory().getContents();
 			for(int i =0;i<items.length; i++) {
-				if(items[i] != null&&enchanted(items[i]))
-					trades.add(new VillagerTrade(items[i],items[i],10));
+				if(items[i] != null&&enchanted(items[i])) {
+					ItemStack y = items[i];
+					trades.add(new VillagerTrade(items[i],disEnchant(player,y),10));
 					//trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
 					player.sendMessage("test");
+				}
 				}
 			
 			
