@@ -71,18 +71,18 @@ public class Commands implements CommandExecutor {
 			List<VillagerTrade> trades = new ArrayList<>();
 			
 			ItemStack[] items = player.getInventory().getContents();
-			for(int i =0;i<items.length; i++) {
-				if(items[i] != null&&enchanted(items[i])) {
-					ItemStack y = items[i];
-					trades.add(new VillagerTrade(y,disEnchant(player,y),10));
+			//for(int i =0;i<items.length; i++) {
+				//if(items[i] != null&&enchanted(items[i])) {
+					ItemStack y = player.getInventory().getItemInMainHand();
+					//trades.add(new VillagerTrade(y,disEnchant(player,y),10));
 					//trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
-					player.sendMessage("test");
-				}
-				}
+				//	player.sendMessage("test");
+				//}
+				//}
 			
 			
 			
-			
+			trades.add(new VillagerTrade(y,disEnchant(player,y),10));
 			trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
 			VillagerInventory inv = new VillagerInventory(trades, player);
 			inv.setName("Disenchant");
