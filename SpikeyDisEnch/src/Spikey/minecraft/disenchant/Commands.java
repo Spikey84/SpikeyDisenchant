@@ -60,6 +60,17 @@ public class Commands implements CommandExecutor {
     	
     	
     }
+    
+    public boolean enchanted(ItemStack in) {
+		@Nonnull
+		Map<Enchantment, Integer> enchantmentsTwo = in.getEnchantments();
+		if(enchantmentsTwo.size()>0) {
+			return true;
+			
+		}
+		return false;
+    	
+    }
 
 
 	@Override
@@ -71,8 +82,8 @@ public class Commands implements CommandExecutor {
 			
 			ItemStack[] items = player.getInventory().getContents();
 			for(int i =0;i<items.length; i++) {
-				if(items[i] != null) {
-					trades.add(new VillagerTrade(items[i],new ItemStack(Material.GLASS),10));
+				if(items[i] != null&& true==enchanted(items[i]))
+					trades.add(new VillagerTrade(items[i],disEnchant(player,items[i]),10));
 					//trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
 					player.sendMessage("test");
 				}
