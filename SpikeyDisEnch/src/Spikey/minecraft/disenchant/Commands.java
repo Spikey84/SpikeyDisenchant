@@ -23,8 +23,7 @@ import net.milkbowl.vault.economy.EconomyResponse;
 
 public class Commands implements CommandExecutor {
 	
-    public ItemStack disEnchant(Player pl, ItemStack in) {
-    	Player player = pl;
+    public ItemStack disEnchant(ItemStack in) {
 		//ItemStack enchanted = new ItemStack(player.getInventory().getItemInMainHand());
     	ItemStack enchanted = in;
 		
@@ -40,7 +39,7 @@ public class Commands implements CommandExecutor {
 					enchanted.removeEnchantment(x);
 					numEnch = numEnch+1;
 				}
-				player.sendRawMessage(prefix+ChatColor.WHITE+"Removed "+numEnch+" enchantments.");
+				//player.sendRawMessage(prefix+ChatColor.WHITE+"Removed "+numEnch+" enchantments.");
 
 			
 			
@@ -74,7 +73,7 @@ public class Commands implements CommandExecutor {
 			for(int i =0;i<items.length; i++) {
 				if(items[i] != null&&enchanted(items[i])) {
 					ItemStack y = items[i];
-					trades.add(new VillagerTrade(new ItemStack(y),disEnchant(player,new ItemStack(y)),10));
+					trades.add(new VillagerTrade(new ItemStack(y),disEnchant(new ItemStack(y)),10));
 					trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
 					player.sendMessage("test");
 				}
@@ -82,7 +81,7 @@ public class Commands implements CommandExecutor {
 			
 			
 			
-			trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
+			//trades.add(new VillagerTrade(new ItemStack(Material.ANVIL), new ItemStack(Material.GLASS), 10));
 			VillagerInventory inv = new VillagerInventory(trades, player);
 			inv.setName("Disenchant");
 			inv.open();
